@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="authSection" class="container">
+    <h1>Task Manager</h1>
+
+    <div class="card">
+      <h2 id="authTitle">Login</h2>
+      <p id="authError" class="error"></p>
+
+      <input type="text" id="name" placeholder="Name" style="display: none" />
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+
+      <button id="authBtn">Login</button>
+      <p class="switch">
+        <span id="switchText">New here?</span>
+        <a href="#" id="switchLink">Register</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="appSection" class="container" style="display: none">
+    <div class="topbar">
+      <h1>My Tasks</h1>
+      <div>
+        <span id="welcome"></span>
+        <button id="logoutBtn" class="small">Logout</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><h3 id="statTotal">0</h3><p>Total</p></div>
+      <div class="stat"><h3 id="statPending">0</h3><p>Pending</p></div>
+      <div class="stat"><h3 id="statDone">0</h3><p>Done</p></div>
+      <div class="stat"><h3 id="statOverdue">0</h3><p>Overdue</p></div>
+    </div>
+
+    <div class="card">
+      <h2 id="formTitle">Add Task</h2>
+      <p id="taskError" class="error"></p>
+      <input type="text" id="title" placeholder="Task title" />
+      <textarea id="description" placeholder="Description (optional)"></textarea>
+      <div class="row">
+        <select id="priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <input type="date" id="dueDate" />
+      </div>
+      <button id="saveBtn">Add Task</button>
+      <button id="cancelBtn" class="small" style="display: none">Cancel</button>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <input type="text" id="search" placeholder="Search tasks" />
+        <select id="filterStatus">
+          <option value="">All status</option>
+          <option value="pending">Pending</option>
+          <option value="done">Done</option>
+        </select>
+        <select id="filterPriority">
+          <option value="">All priority</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <select id="sortBy">
+          <option value="">Newest first</option>
+          <option value="dueDate">Due date</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="taskList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

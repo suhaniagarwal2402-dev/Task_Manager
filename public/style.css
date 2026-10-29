@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+  margin: 0;
+  color: #222;
+}
+
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+h1 {
+  text-align: center;
+  color: #2d3e50;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+button.small {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+button.danger {
+  background: #ef4444;
+}
+
+button.danger:hover {
+  background: #dc2626;
+}
+
+button.grey {
+  background: #6b7280;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 14px;
+  min-height: 18px;
+}
+
+.switch {
+  text-align: center;
+  font-size: 14px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar h1 {
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 15px;
+}
+
+.stat {
+  flex: 1;
+  background: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.stat p {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 13px;
+}
+
+.task {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 5px solid #3b82f6;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task.high {
+  border-left-color: #ef4444;
+}
+
+.task.medium {
+  border-left-color: #f59e0b;
+}
+
+.task.low {
+  border-left-color: #22c55e;
+}
+
+.task.done h3 {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task h3 {
+  margin: 0 0 5px;
+}
+
+.task p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.task .actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.overdue-text {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .stats {
+    flex-wrap: wrap;
+  }
+  .stat {
+    min-width: 45%;
+  }
+}
